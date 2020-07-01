@@ -68,7 +68,7 @@ let extName = path.extname(filePath);
 //Initial Content type
 let contentType = 'text/html';
 
-switch(extname){
+switch(extName){
     case '.js':
         contentType = 'text/javascript';
         break;
@@ -109,5 +109,5 @@ fs.readFile(filePath,(err,content)=>{
 });
 });
 
-const PORT = process.env.port||5000;
+const PORT = process.env.port || 5000;
 server.listen(PORT,()=> console.log(`server running on port ${PORT}`))
